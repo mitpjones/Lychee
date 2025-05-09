@@ -185,18 +185,7 @@ const {
 const { photoRoute } = usePhotoRoute(router);
 
 function photoClick(idx: number, e: MouseEvent) {
-
 	router.push(photoRoute(photos.value[idx].id));
-
-	// If clicked on a 'raw' file then download and open in a new window
-	// if (photos.value[idx].precomputed.is_raw === true) {
-	// 	const url = album.value.photos[idx].size_variants.original.url;
-	// 	window.open(url);
-	// }
-	// else {
-	// 	router.push(photoRoute(album.value?.id, photos.value[idx].id));
-	// }
-
 }
 
 const areStatisticsOpen = ref(false);
