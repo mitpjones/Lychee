@@ -8,6 +8,7 @@
 				:config="config"
 				:user="user"
 				@refresh="emits('refresh')"
+				@toggle-slide-show="emits('toggleSlideShow')"
 				@toggle-edit="emits('toggleEdit')"
 				@open-search="emits('openSearch')"
 				@go-back="emits('goBack')"
@@ -36,11 +37,9 @@
 				<AlbumHero
 					v-if="!noData"
 					:album="album"
-					:config="config"
 					:has-hidden="hasHidden"
 					@open-sharing-modal="toggleShareAlbum"
 					@open-statistics="toggleStatistics"
-					@toggle-slide-show="emits('toggleSlideShow')"
 				/>
 				<template v-if="is_se_enabled && user?.id !== null">
 					<AlbumStatistics
