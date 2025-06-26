@@ -24,7 +24,7 @@ export const useTogglablesStateStore = defineStore("togglables-store", {
 
 		// Photo toggleables
 		is_photo_edit_open: false,
-		are_details_open: false,
+		are_details_open: true,
 		is_slideshow_active: false,
 
 		// Scroll memory
